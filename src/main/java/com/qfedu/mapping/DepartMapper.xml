@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+        <mapper namespace="com.qfedu.dao.DepartDao">
+        <insert id="addDepart" parameterType="depart">
+            INSERT into t_depart VALUES (null,#{name},#{createtime},1)
+        </insert>
+
+        <delete id="delDepart" parameterType="depart">
+            DELETE FROM t_depart WHERE id=#{id}
+        </delete>
+
+        <update id="updateDepart" parameterType="depart">
+            update t_depart set id=#{id},name=#{name},createtime=#{createtime} where id=#{id}
+        </update>
+
+        <select id="selectDepart" resultType="depart">
+            select * FROM t_depart
+        </select>
+
+        <select id="departById" resultType="depart">
+            select * FROM t_depart WHERE id=#{id}
+        </select>
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="com.qfedu.dao.GradeDao">
+    <insert id="addGrade" parameterType="grade">
+        INSERT into t_grade VALUES (null,#{name},1,#{week},#{createdate},#{location},#{cid})
+    </insert>
+
+    <delete id="delGrade" parameterType="grade">
+        DELETE FROM t_grade WHERE id=#{id}
+    </delete>
+
+    <update id="updateGrade" parameterType="grade">
+        UPDATE FROM t_grade SET id=#{id},name=#{name},1,week=#{week},createdate=#{createdate},location=#{location},cid=#{cid}
+        WHERE id=#{id}
+    </update>
+
+    <select id="selectGrade" resultType="grade">
+        SELECT * FROM t_grade
+    </select>
+
+    <select id="gradeById" resultType="grade">
+        SELECT * FROM t_grade WHERE id=#{id}
+    </select>
+</mapper>

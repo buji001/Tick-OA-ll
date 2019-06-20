@@ -13,8 +13,12 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias type="com.qfedu.entity.Bankuser" alias="bankuser"/>
-		<typeAlias type="com.qfedu.entity.Jilu" alias="jilu"/>
+		<typeAlias type="com.qfedu.entity.User" alias="user"/>
+		<typeAlias type="com.qfedu.entity.Depart" alias="depart"/>
+		<typeAlias type="com.qfedu.entity.Staff" alias="staff"/>
+		<typeAlias type="com.qfedu.entity.Course" alias="course"/>
+		<typeAlias type="com.qfedu.entity.Student" alias="student"/>
+		<typeAlias type="com.qfedu.entity.Grade" alias="grade"/>
 	</typeAliases>
 
 	<plugins>

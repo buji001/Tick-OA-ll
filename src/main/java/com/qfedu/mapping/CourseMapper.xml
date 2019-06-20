@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+        <mapper namespace="com.qfedu.dao.CourseDao">
+    <insert id="addCourse" parameterType="course">
+      INSERT into t_course VALUES (null,#{name},1,#{week},#{createdate},#{type})
+    </insert>
+
+    <delete id="delCourse" parameterType="course">
+      DELETE FROM t_course WHERE id=#{id}
+    </delete>
+
+    <update id="updateCourse" parameterType="course">
+      UPDATE t_course set id=#{id},name=#{name},week=#{week},createdate=#{createdate},type=#{type} where id=#{id}
+    </update>
+
+    <select id="selectCourse" resultType="course">
+      SELECT * FROM t_course
+    </select>
+
+    <select id="courseById" resultType="course">
+        SELECT * FROM t_course WHERE id=#{id}
+    </select>
+</mapper>

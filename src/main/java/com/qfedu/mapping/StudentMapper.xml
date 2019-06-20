@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="com.qfedu.dao.StudentDao">
+    <insert id="addStudent" parameterType="student">
+        INSERT into t_student VALUES (no=#{no},name=#{name},sex=#{sex},birthday=#{birthday},cardno=#{cardno},school=#{school},
+        education=#{education},gid=#{gid},1,email=#{email},qq=#{qq},phone=#{phone},introno=#{introno},
+        createdate=#{createdate},photo=#{photo})
+    </insert>
+
+    <delete id="delStudent" parameterType="student">
+        DELETE FROM t_student WHERE no=#{no}
+    </delete>
+
+    <update id="updateStudent" parameterType="student">
+        UPDATE t_student SET no=#{no},name=#{name},sex=#{sex},birthday=#{birthday},cardno=#{cardno},school=#{school},
+        education=#{education},gid=#{gid},1,email=#{email},qq=#{qq},phone=#{phone},introno=#{introno},
+        createdate=#{createdate},photo=#{photo} WHERE no=#{no}
+    </update>
+
+    <select id="selectStudent" resultType="student">
+        SELECT * FROM t_student
+    </select>
+
+    <select id="studentByNo" resultType="student">
+        SELECT * FROM t_student WHERE no=#{no}
+    </select>
+</mapper>
